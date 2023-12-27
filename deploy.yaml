@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: iisi-demo
+  name: iisi-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: iisi-demo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: iisi-demo
+    spec:
+      containers:
+      - image: cpingwang/iisi-demo:0.1.0
+        name: iisi-demo
+        resources: {}
+status: {}
